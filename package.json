@@ -1,0 +1,38 @@
+{
+  "name": "bot-discord",
+  "version": "0.0.1",
+  "description": "Taverna Bot Discord Manager",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test:md": "remark -f .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix:md": "remark . -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tavernadev/bot-discord.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "tavernadev"
+  ],
+  "author": "Taverna Dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tavernadev/bot-discord/issues"
+  },
+  "homepage": "https://github.com/tavernadev/bot-discord#readme",
+  "devDependencies": {
+    "remark-cli": "^8.0.1",
+    "remark-lint": "^7.0.1",
+    "remark-lint-double-link": "^0.1.2",
+    "remark-lint-emphasis-marker": "^2.0.1",
+    "remark-lint-strong-marker": "^2.0.1",
+    "remark-preset-lint-recommended": "^4.0.1",
+    "remark-validate-links": "^10.0.2"
+  }
+}
