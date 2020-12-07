@@ -2,22 +2,25 @@
   "name": "bot-discord",
   "version": "0.0.1",
   "description": "Taverna Bot Discord Manager",
-  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "test": "npm-run-all -c test:*",
     "test:depcheck": "depcheck",
     "test:lockfile": "lockfile-lint -a https://registry.npmjs.org -s -c -i -t npm -p package-lock.json",
     "test:audit": "npm audit",
     "test:json": "npmPkgJsonLint . --maxWarnings 0",
     "test:md": "remark -f .",
-    "test:eslint": "eslint . --config=.eslintrc.json --max-warnings 0",
+    "test:eslint": "eslint . --ext .js,.md --config=.eslintrc.json",
+    "test:prettier": "prettier-standard --check \"**/*.{json,yaml,yml}\" ",
     "fix": "npm-run-all -c fix:*",
+    "fix:eslint": "eslint . --ext .js,.md --fix --config=.eslintrc.json",
+    "fix:prettier": "prettier-standard --format \"**/*.{json,yaml,yml}\" ",
     "fix:md": "remark . -o",
-    "fix:eslint": "eslint . --fix --config=.eslintrc.json",
-    "fix:test": "npm run test"
+    "fix:test": "npm run test",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,11 @@
     "discord",
     "tavernadev"
   ],
-  "author": "Taverna Dev",
+  "author": {
+    "name": "Taverna Dev",
+    "email": "contato@taverna.dev",
+    "url": "https://taverna.dev"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tavernadev/bot-discord/issues"
@@ -39,13 +46,17 @@
     "eslint": "^7.15.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^5.0.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.3",
     "lockfile-lint": "^4.3.7",
     "npm-package-json-lint": "^5.1.0",
     "npm-package-json-lint-config-default": "^3.0.0",
     "npm-run-all": "^4.1.5",
+    "prettier-standard": "^16.4.1",
     "remark-cli": "^8.0.1",
     "remark-lint": "^7.0.1",
     "remark-lint-double-link": "^0.1.2",
