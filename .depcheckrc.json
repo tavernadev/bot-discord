@@ -1,6 +1,8 @@
 {
   "ignores": [
     "husky",
+    "@commitlint/cli",
+    "@commitlint/config-conventional",
     "npm-package-json-lint-config-default",
     "remark-lint",
     "remark-lint-double-link",
