@@ -1,4 +1,7 @@
 {
   "extends": ["standard"],
-  "plugins": ["markdown"]
+  "plugins": ["markdown"],
+  "env": {
+    "jest": true
+  }
 }
