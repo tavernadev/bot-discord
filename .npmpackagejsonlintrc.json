@@ -1,0 +1,11 @@
+{
+  "extends": "npm-package-json-lint-config-default",
+  "overrides": [
+    {
+      "patterns": ["./package.json"],
+      "rules": {
+        "require-version": "off"
+      }
+    }
+  ]
+}

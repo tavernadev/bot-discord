@@ -1,0 +1,12 @@
+{
+  "ignores": [
+    "npm-package-json-lint-config-default",
+    "remark-lint",
+    "remark-lint-double-link",
+    "remark-lint-emphasis-marker",
+    "remark-lint-strong-marker",
+    "remark-preset-lint-recommended",
+    "remark-validate-links",
+    "eslint-plugin-standard"
+  ]
+}
