@@ -19,16 +19,16 @@ jobs:
   test:
     runs-on: ubuntu-18.04
     steps:
-      - name: "Checkout"
+      - name: 'Checkout'
         uses: actions/checkout@v2
 
       - name: Set Node.js
         uses: actions/setup-node@v2.1.2
         with:
-          node-version: "12.x"
+          node-version: '12.x'
           registry-url: https://npm.pkg.github.com
         env:
-          RUNNER_TEMP: "/tmp/"
+          RUNNER_TEMP: '/tmp/'
 
       - name: Cache Node Modules
         uses: actions/cache@v2
