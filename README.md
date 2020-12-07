@@ -1,4 +1,7 @@
 # bot-discord
 
--   ZA
--   Taverna Bot Discord Manager
+Taverna Bot Discord Manager
+
+## Docs
+
+-   [workflow](docs/workflow.md)
