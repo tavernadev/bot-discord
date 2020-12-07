@@ -66,5 +66,8 @@
     "remark-lint-strong-marker": "^2.0.1",
     "remark-preset-lint-recommended": "^4.0.1",
     "remark-validate-links": "^10.0.2"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1"
   }
 }
