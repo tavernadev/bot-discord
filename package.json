@@ -2,6 +2,7 @@
   "name": "bot-discord",
   "version": "0.0.1",
   "description": "Taverna Bot Discord Manager",
+  "main": "src/index.js",
   "directories": {
     "doc": "docs"
   },
@@ -20,7 +21,8 @@
     "fix:prettier": "prettier-standard --format \"**/*.{json,yaml,yml}\" ",
     "fix:md": "remark . -o",
     "fix:test": "npm run test",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -55,6 +57,7 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.5.3",
     "lockfile-lint": "^4.3.7",
+    "nodemon": "^2.0.6",
     "npm-package-json-lint": "^5.1.0",
     "npm-package-json-lint-config-default": "^3.0.0",
     "npm-run-all": "^4.1.5",
@@ -68,6 +71,7 @@
     "remark-validate-links": "^10.0.2"
   },
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
   }
 }
