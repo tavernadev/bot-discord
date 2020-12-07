@@ -1,0 +1,9 @@
+{
+  "*.{js,md}": ["eslint --ext .js,.md --fix --config=.eslintrc.json"],
+  "*.md": ["remark -o -r .remarkrc", "remark -f -r .remarkrc"],
+  "{package.json, package-lock.json}": [
+    "npmPkgJsonLint .",
+    "lockfile-lint -a https://registry.npmjs.org -s -c -i -t npm -p package-lock.json"
+  ],
+  "*.{json,yaml,yml}": ["prettier-standard --format '**/*.{json,yaml,yml}'"]
+}

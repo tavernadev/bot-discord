@@ -1,0 +1,13 @@
+{
+  "settings": {
+    "emphasis": "*",
+    "strong": "*"
+  },
+  "plugins": [
+    "preset-lint-recommended",
+    "lint-emphasis-marker",
+    "lint-strong-marker",
+    "lint-double-link",
+    "validate-links"
+  ]
+}
