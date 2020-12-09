@@ -42,7 +42,7 @@ jobs:
         run: npm ci
 
       - name: Run Tests
-        run: npm test
+        run: npm test --coverage
 
       - name: Codecov Action
         uses: codecov/codecov-action@v1
