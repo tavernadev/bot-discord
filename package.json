@@ -15,7 +15,7 @@
     "test:md": "remark -f .",
     "test:eslint": "eslint . --ext .js,.md --config=.eslintrc.json",
     "test:prettier": "prettier-standard --check \"**/*.{json,yaml,yml}\" ",
-    "test:jest": "jest --coverage",
+    "test:jest": "jest --coverage && codecov",
     "fix": "npm-run-all -c fix:*",
     "fix:eslint": "eslint . --ext .js,.md --fix --config=.eslintrc.json",
     "fix:prettier": "prettier-standard --format \"**/*.{json,yaml,yml}\" ",
