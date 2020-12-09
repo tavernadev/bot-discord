@@ -41,6 +41,9 @@ jobs:
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
 
+      - name: Install Codecov
+        run: npm install codecov
+
       - name: Run Tests
         run: npm test
 
@@ -48,3 +51,4 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+        run:
