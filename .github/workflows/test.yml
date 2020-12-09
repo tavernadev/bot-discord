@@ -47,4 +47,5 @@ jobs:
       - name: Codecov Action
         uses: codecov/codecov-action@v1
         with:
+          file: ./coverage/coverage-final.json
           token: ${{ secrets.CODECOV_TOKEN }}
