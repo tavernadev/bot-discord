@@ -8,5 +8,6 @@ module.exports = {
   collectCoverageFrom: ['<rootDir>/src/*.js'],
   coveragePathIgnorePatterns: ['/src/tests/'],
   coverageReporters: ['json', 'text', 'html'],
-  testEnvironment: 'node'
+  testEnvironment: 'node',
+  testMatch: ['**/tests/**/*.test.js']
 }
