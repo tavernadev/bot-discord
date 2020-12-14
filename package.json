@@ -22,8 +22,12 @@
     "fix:prettier": "prettier-standard --format \"**/*.{json,yaml,yml}\" ",
     "fix:md": "remark . -o",
     "fix:test": "npm run test",
-    "start": "node src/index.js",
-    "dev": "nodemon"
+    "start": "npm-run-all start:*",
+    "start:config": "cp .env.dev .env",
+    "start:server": "babel-node src/index.js",
+    "dev": "npm-run-all dev:*",
+    "dev:config": "cp .env.dev .env",
+    "dev:server": "nodemon --config .nodemonrc src/index.js"
   },
   "repository": {
     "type": "git",
@@ -46,6 +50,7 @@
   "homepage": "https://github.com/tavernadev/bot-discord#readme",
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.10",
     "@babel/preset-env": "^7.12.7",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
