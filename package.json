@@ -20,6 +20,7 @@
     "fix:eslint": "eslint . --ext .js,.md --fix --config=.eslintrc.json",
     "fix:prettier": "prettier-standard --format \"**/*.{json,yaml,yml}\" ",
     "fix:md": "remark . -o",
+    "fix:test": "npm run test",
     "start": "babel-node src/index.js",
     "start:watch": "nodemon --config .nodemonrc src/index.js"
   },
