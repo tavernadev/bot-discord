@@ -7,7 +7,7 @@ module.exports = {
   coverageProvider: 'v8',
   collectCoverageFrom: ['<rootDir>/src/*.js'],
   coveragePathIgnorePatterns: ['/src/tests/'],
-  coverageReporters: ['json', 'text', 'html'],
+  coverageReporters: ['lcov', 'json', 'text', 'html'],
   testEnvironment: 'node',
   testMatch: ['**/tests/**/*.test.js']
 }
