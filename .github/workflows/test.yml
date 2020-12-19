@@ -46,3 +46,12 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+      - name: Run Coverage
+        run: npm run codecov
+
+      - name: Codecov Action
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage/coverage-final.json
+          token: ${{ secrets.CODECOV_TOKEN }}

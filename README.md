@@ -4,4 +4,4 @@ Taverna Bot Discord Manager
 
 ## Docs
 
--   [workflow](docs/workflow.md)
+*   [workflow](docs/workflow.md)
