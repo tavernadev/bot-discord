@@ -5,9 +5,14 @@ module.exports = {
   roots: ['<rootDir>/src'],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
-  collectCoverageFrom: ['<rootDir>/src/*.js'],
-  coveragePathIgnorePatterns: ['/src/tests/'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.js'],
+  coveragePathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/src/tests/',
+    '<rootDir>/build/',
+    '.test.js'
+  ],
   coverageReporters: ['lcov', 'json', 'text', 'html'],
   testEnvironment: 'node',
-  testMatch: ['**/tests/**/*.test.js']
+  testMatch: ['<rootDir>/src/**/*.test.js']
 }
