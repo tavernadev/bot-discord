@@ -20,7 +20,7 @@
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "start:server"],
+      "runtimeArgs": ["run", "debug:server"],
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
       "stopOnEntry": true,
