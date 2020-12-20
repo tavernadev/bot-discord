@@ -12,7 +12,7 @@
     "test:lockfile": "lockfile-lint -a https://registry.npmjs.org -s -c -i -t npm -p package-lock.json",
     "test:audit": "npm audit",
     "test:json": "npmPkgJsonLint . --maxWarnings 0",
-    "test:md": "remark -f .",
+    "test:md": "remark -f . .github",
     "test:eslint": "eslint . --ext .js,.md --config=.eslintrc.json",
     "test:prettier": "prettier-standard --check \"**/*.{json,yaml,yml}\" ",
     "test:jest": "jest --silent",
@@ -22,7 +22,7 @@
     "fix": "npm-run-all -c fix:*",
     "fix:eslint": "eslint . --ext .js,.md --fix --config=.eslintrc.json",
     "fix:prettier": "prettier-standard --format \"**/*.{json,yaml,yml}\" ",
-    "fix:md": "remark . -o",
+    "fix:md": "remark . .github -o",
     "fix:test": "npm run test",
     "start": "babel-node src/index.js",
     "start:watch": "nodemon --config .nodemonrc src/index.js"
