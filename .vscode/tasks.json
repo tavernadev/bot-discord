@@ -5,7 +5,7 @@
       "label": "webpack",
       "type": "process",
       "command": "npm",
-      "args": ["run", "build"],
+      "args": ["run", "build:dev"],
       "options": {
         "cwd": "${workspaceFolder}"
       },

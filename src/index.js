@@ -5,6 +5,7 @@ export function hello (a) {
 const t = hello('Hello World!')
 
 console.log(t)
+// import './utils/dotenv'
 // import server from './server'
 
 // const port = process.env.PORT || 3000

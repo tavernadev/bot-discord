@@ -12,6 +12,7 @@
     "remark-validate-links",
     "eslint-plugin-standard",
     "@babel/node",
-    "webpack-cli"
+    "webpack-cli",
+    "babel-loader"
   ]
 }
