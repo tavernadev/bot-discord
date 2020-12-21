@@ -1,13 +1,11 @@
 import express from 'express'
-import RespPadrao from '../services/message.service'
+import MessageService from '../services/message.service'
+import handleRoute from '../utils/handleRoute'
 
-const Prefix = '/v1/message'
+const Prefix = '/v1/message/'
 const Router = express.Router()
 
-Router.get('/a', RespPadrao)
-  .put('/b', RespPadrao)
-  .post(RespPadrao)
-  .delete(RespPadrao)
+Router.post('/', handleRoute(MessageService.SendMessage))
 
 export default {
   Prefix,
