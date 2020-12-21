@@ -1,6 +1,6 @@
 import express from 'express'
 import loadRoutes from '../routes'
-import handleError from '../utils/handleError'
+import error from './error'
 
 const server = express()
 
@@ -8,6 +8,6 @@ server.use(express.json())
 
 loadRoutes(server)
 
-server.use(handleError.handleError)
+server.use(error.handler)
 
 export default server

@@ -1,11 +1,9 @@
-import messageRouter from './message.router'
-
-const apiPrefix = '/api'
+import messageRouter from './message.route'
 
 export default function loadRoutes (Server) {
-  Server.use(ConCat(messageRouter.Prefix), messageRouter.Router)
+  Server.use(api(messageRouter.prefix), messageRouter.router)
 }
 
-function ConCat (routePrefix) {
-  return apiPrefix + routePrefix
+function api (routePrefix) {
+  return `/api${routePrefix}`
 }

@@ -1,9 +1,9 @@
-import handleError from '../utils/handleError'
+import error from '../server/error'
 
 const SendMessage = function (req, res, next) {
   console.log('MessageService.SendMessage', req.body)
   if (!req.body.message || !req.body.channelId) {
-    handleError.errorMessage({
+    error.raise({
       statusCode: 400,
       origin: 'MessageService.SendMessage',
       message: 'No Message or No ChannelId!',
