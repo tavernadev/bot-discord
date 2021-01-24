@@ -16,7 +16,7 @@
     "test:md": "remark -f . .github",
     "test:eslint": "eslint . --ext .js,.md --config=.eslintrc.json",
     "test:prettier": "prettier-standard --check \"**/*.{json,yaml,yml}\" ",
-    "test:jest": "jest --silent --passWithNoTests",
+    "test:jest": "jest --silent",
     "jest:watch": "jest --watch",
     "jest:debug": "jest --runInBand -c jest.config.js --no-cache",
     "codecov": "npm-run-all -c codecov:*",
@@ -88,6 +88,7 @@
     "remark-lint-strong-marker": "^2.0.1",
     "remark-preset-lint-recommended": "^5.0.0",
     "remark-validate-links": "^10.0.2",
+    "supertest": "^6.0.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0"
   },

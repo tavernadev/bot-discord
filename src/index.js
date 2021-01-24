@@ -1,15 +1,8 @@
-export function hello (a) {
-  return a
-}
+import './utils/dotenv'
+import server from './server'
 
-const t = hello('Hello World!')
+const port = process.env.PORT || 3000
 
-console.log(t)
-// import './utils/dotenv'
-// import server from './server'
-
-// const port = process.env.PORT || 3000
-
-// server.listen(port, () => {
-//   console.log(`Example app listening at http://localhost:${port}`)
-// })
+server.listen(port, () => {
+  console.log(`Server Ready at http://localhost:${port}`)
+})
