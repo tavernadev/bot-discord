@@ -1,6 +1,8 @@
 import request from 'supertest'
 import server from '../../server'
 
+const spy = jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
 describe('Test Message Route', () => {
   test('It should send a message successfully', () => {
     const body = { message: 'test', channelId: '1234' }
@@ -10,6 +12,7 @@ describe('Test Message Route', () => {
       .then(response => {
         expect(response.statusCode).toBe(200)
         expect(response.body).toEqual(body)
+        expect(spy).toHaveBeenCalled()
       })
   })
 
@@ -20,6 +23,7 @@ describe('Test Message Route', () => {
       .then(response => {
         expect(response.statusCode).toBe(400)
         expect(response.body).toEqual(body)
+        expect(spy).toHaveBeenCalled()
       })
   })
 })
