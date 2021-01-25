@@ -1,7 +1,6 @@
-export function hello (a) {
-  return a
-}
+import server from './server'
+import Config from './config'
 
-const t = hello('Hello World!')
-
-console.log(t)
+server.listen(Config.PORT, () => {
+  console.log(`Server Ready at http://localhost:${Config.PORT}`)
+})

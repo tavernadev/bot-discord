@@ -1,4 +1,0 @@
-{
-  "watch": "./",
-  "exec": "babel-node"
-}

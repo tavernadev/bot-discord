@@ -4,10 +4,3 @@ node_modules
 coverage
 build
 
-# Files
-
-.env
-
-# Extensions
-
-*.log
