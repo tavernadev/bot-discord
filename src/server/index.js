@@ -8,6 +8,7 @@ server.use(express.json())
 
 loadRoutes(server)
 
+server.use(error.notFound)
 server.use(error.handler)
 
 export default server

@@ -5,7 +5,8 @@ const SendMessage = function (req, res, next) {
   if (!req.body.message || !req.body.channelId) {
     error.raise({
       statusCode: 400,
-      origin: 'MessageService.SendMessage',
+      origin: '/api/v1/message',
+      method: 'POST',
       message: 'No Message or No ChannelId!',
       body: req.body
     })

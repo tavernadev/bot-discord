@@ -1,7 +1,4 @@
-if (process.env.NODE_ENV === 'development') {
+if (['development', 'test'].includes(process.env.NODE_ENV)) {
   require('dotenv').config({ path: '.env.dev' })
-  console.log('Dotenv Loaded from .env.dev')
+  console.log('Environment Loaded from Dotenv .env.dev')
 }
-console.log('ENVIRONMENT VARIABLES')
-console.log('NODE_ENV', process.env.NODE_ENV)
-console.log('PORT', process.env.PORT)
