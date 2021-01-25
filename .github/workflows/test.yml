@@ -50,6 +50,9 @@ jobs:
       - name: Run Coverage
         run: npm run codecov
 
+      - name: Building Project
+        run: npm run build:dev
+
       - name: Codecov Action
         uses: codecov/codecov-action@v1
         with:
