@@ -10,6 +10,9 @@
     "remark-lint-strong-marker",
     "remark-preset-lint-recommended",
     "remark-validate-links",
-    "eslint-plugin-standard"
+    "eslint-plugin-standard",
+    "@babel/node",
+    "webpack-cli",
+    "babel-loader"
   ]
 }

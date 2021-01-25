@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server Attach",
+      "type": "node",
+      "request": "attach",
+      "restart": true,
+      "port": 9229,
+      "address": "127.0.0.1",
+      "sourceMaps": true,
+      "stopOnEntry": true,
+      "timeout": 20000,
+      "skipFiles": ["<node_internals>/**", "node_modules"],
+      "protocol": "inspector"
+    },
+    {
+      "name": "Server Start",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start:server"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "stopOnEntry": true,
+      "disableOptimisticBPs": true,
+      "restart": true,
+      "timeout": 20000,
+      "preLaunchTask": "webpack",
+      "protocol": "inspector",
+      "smartStep": true
+    },
+    {
+      "name": "Jest",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": ["run", "jest:debug", "src/tests/index.test.js"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen",
+      "stopOnEntry": true,
+      "disableOptimisticBPs": true
+    }
+  ]
+}
