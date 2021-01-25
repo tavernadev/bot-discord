@@ -13,6 +13,6 @@ Gerenciador do Taverna Bot Discord
 Rode os seguintes comandos no terminal
 
 ```sh
-npm ci
+npm install
 npm start
 ```
