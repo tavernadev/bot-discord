@@ -17,6 +17,9 @@ function handler (err, req, res, next) {
 }
 
 function notFound (req, res, next) {
+  if (res._headerSent) {
+    return next()
+  }
   raise({
     statusCode: 404,
     origin: req.originalUrl,
