@@ -12,7 +12,6 @@ describe('Test Message Route', () => {
       .then(response => {
         expect(response.statusCode).toBe(200)
         expect(response.body).toEqual(body)
-        expect(spy).toHaveBeenCalled()
       })
   })
 
